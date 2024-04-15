@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="he">
+<head>
+<meta charset="UTF-8">
+<title>הגעת ילדי גן שקמים</title>
+<link rel="stylesheet" href="styles.css">
+
+</head>
+<body>
+    <header>
+        <img src="logo-shakmim.jpg" alt="Logo" id="left-logo">
+        <img src="madadodes-logo.png" alt="Logo" id="right-logo">
+    </header>
+    
+    <h1>הגעת ילדי גן שקמים - כיצד הגעתי לגן?</h1>
+    <h1></h1>
+    
+    <div id="graph">
+        <!-- Sections for each transportation method -->
+        <div class="transport" id="walking">
+            <div class="count">0</div>
+            <div class="transport-way">בהליכה</div>
+        </div>
+        <div class="transport" id="car">
+            <div class="count">0</div>
+            <div class="transport-way">במכונית</div>
+
+        </div>
+        <div class="transport" id="bus">
+            <div class="count">0</div>
+            <div class="transport-way">באוטובוס</div>
+
+        </div>
+        <div class="transport" id="bicycle">
+            <div class="count">0</div>
+            <div class="transport-way">באופניים</div>
+        </div>
+    </div>
+    
+    <!-- You will need a list of children's names that can be dragged -->
+    <div id="names">
+    </div>
+    <script src="drag-and-drop.js"></script>
+</body>
+</html>

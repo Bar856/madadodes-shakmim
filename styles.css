@@ -1,0 +1,78 @@
+body {
+    font-family: 'Comic Sans MS', 'Arial', sans-serif;
+    text-align: center;
+    direction: rtl;
+    background-color: #fff3e0;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    padding: 10px;
+}
+
+#left-logo,
+#right-logo {
+    width: 100px; /* Adjust size as needed */
+    border-radius: 50%;
+}
+
+h1 {
+    color: #ff6f61;
+    font-size: 1.5rem;
+}
+
+#graph {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 30px;
+    flex-wrap: wrap;
+}
+
+.transport {
+    border: 3px solid #ffab91;
+    border-radius: 15px; 
+    padding: 10px;
+    width: 150px;
+    min-height: 100px;
+    cursor: pointer;
+    text-align: center;
+    margin: 10px; 
+    background-color: #fbe9e7;
+    box-shadow: 3px 3px 6px #eeeeee;
+}
+
+#names {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 30px;
+}
+
+.name {
+    padding: 10px;
+    margin: 10px;
+    background-color: #ffccbc;
+    cursor: grab;
+    border-radius: 10px;
+    box-shadow: 2px 2px 4px #bbbbbb;
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+.over {
+    border: 3px dashed #ff8a65;
+    background-color: #ffe0b2;
+}
+
+.invisible {
+    display: none;
+}
+
+.count, .transport-way {
+    margin-top: 10px;
+    font-weight: bold;
+    font-size: 2rem;
+    color: #d84315;
+}
