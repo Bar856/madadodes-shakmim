@@ -2,7 +2,7 @@ body {
     font-family: 'Comic Sans MS', 'Arial', sans-serif;
     text-align: center;
     direction: rtl;
-    background-color: #fff3e0;
+    background-color: #e0f8ff;
 }
 
 header {
@@ -15,12 +15,11 @@ header {
 #left-logo,
 #right-logo {
     width: 100px; /* Adjust size as needed */
-    border-radius: 50%;
 }
 
 h1 {
-    color: #ff6f61;
-    font-size: 1.5rem;
+    color: #61c2ff;
+    font-size: 2rem;
 }
 
 #graph {
@@ -31,7 +30,7 @@ h1 {
 }
 
 .transport {
-    border: 3px solid #ffab91;
+    border: 3px solid #91ffff;
     border-radius: 15px; 
     padding: 10px;
     width: 150px;
@@ -39,7 +38,7 @@ h1 {
     cursor: pointer;
     text-align: center;
     margin: 10px; 
-    background-color: #fbe9e7;
+    background-color: #e7fafb;
     box-shadow: 3px 3px 6px #eeeeee;
 }
 
@@ -53,7 +52,7 @@ h1 {
 .name {
     padding: 10px;
     margin: 10px;
-    background-color: #ffccbc;
+    background-color: #bce2ff;
     cursor: grab;
     border-radius: 10px;
     box-shadow: 2px 2px 4px #bbbbbb;
@@ -62,8 +61,8 @@ h1 {
 }
 
 .over {
-    border: 3px dashed #ff8a65;
-    background-color: #ffe0b2;
+    border: 3px dashed #65f7ff;
+    background-color: #b2fff5;
 }
 
 .invisible {
@@ -74,5 +73,5 @@ h1 {
     margin-top: 10px;
     font-weight: bold;
     font-size: 2rem;
-    color: #d84315;
+    color: #15b1d8;
 }

@@ -25,6 +25,48 @@ const childrenList = [
     'אדל שלם',
     'מיאל שמוטקין'
 ];
+function makeElementDraggable(element) {
+    let active = false;
+    let currentX, currentY, initialX, initialY, offsetX = 0, offsetY = 0;
+  
+    element.addEventListener("touchstart", dragStart, false);
+    element.addEventListener("touchend", dragEnd, false);
+    element.addEventListener("touchmove", drag, false);
+  
+    function dragStart(e) {
+      if (e.type === "touchstart") {
+        initialX = e.touches[0].clientX - offsetX;
+        initialY = e.touches[0].clientY - offsetY;
+      }
+      active = true;
+    }
+  
+    function dragEnd(e) {
+      initialX = currentX;
+      initialY = currentY;
+      active = false;
+    }
+  
+    function drag(e) {
+      if (active) {
+        e.preventDefault();
+        
+        if (e.type === "touchmove") {
+          currentX = e.touches[0].clientX - initialX;
+          currentY = e.touches[0].clientY - initialY;
+        }
+  
+        offsetX = currentX;
+        offsetY = currentY;
+  
+        setTranslate(currentX, currentY, element);
+      }
+    }
+  
+    function setTranslate(xPos, yPos, el) {
+      el.style.transform = "translate3d(" + xPos + "px, " + yPos + "px, 0)";
+    }
+  }
 function createNameDivs(namesArray) {
     const namesContainer = document.getElementById('names');
     namesContainer.innerHTML = ''; // Clear existing names if any
@@ -39,6 +81,9 @@ function createNameDivs(namesArray) {
 }
 document.addEventListener('DOMContentLoaded', (event) => {
     let draggedItem = null;
+    document.querySelectorAll('.name').forEach((nameElement) => {
+        makeElementDraggable(nameElement);
+      });
     createNameDivs(childrenList)
     // Function to update the count of children for each transport method
     function updateCount(zone) {
