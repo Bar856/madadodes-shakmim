@@ -69,7 +69,7 @@ function makeElementDraggable(element) {
   }
 function createNameDivs(namesArray) {
     const namesContainer = document.getElementById('names');
-    namesContainer.innerHTML = ''; // Clear existing names if any
+    namesContainer.innerHTML = '';
 
     namesArray.forEach(name => {
         const nameDiv = document.createElement('div');
@@ -85,13 +85,11 @@ document.addEventListener('DOMContentLoaded', (event) => {
         makeElementDraggable(nameElement);
       });
     createNameDivs(childrenList)
-    // Function to update the count of children for each transport method
     function updateCount(zone) {
         const count = zone.querySelectorAll('.name').length; // Ensure to only select .name elements
         zone.querySelector('.count').textContent = `${count}`;
     }
 
-    // Add event listeners for drag and drop functionality to each name
     document.querySelectorAll('.name').forEach((item) => {
         item.addEventListener('dragstart', function (e) {
             draggedItem = this;
@@ -106,7 +104,6 @@ document.addEventListener('DOMContentLoaded', (event) => {
         });
     });
 
-    // Add event listeners for the transport method containers
     document.querySelectorAll('.transport').forEach((zone) => {
         zone.addEventListener('dragover', function (e) {
             e.preventDefault();
@@ -125,16 +122,14 @@ document.addEventListener('DOMContentLoaded', (event) => {
             e.preventDefault();
             if (draggedItem) {
                 this.classList.remove('over');
-                // Append the dragged item after the count element
                 const countElement = this.querySelector('.count');
-                this.insertBefore(draggedItem, countElement.nextSibling); // Insert after count
-                updateCount(this); // Update the count
+                this.insertBefore(draggedItem, countElement.nextSibling); 
+                updateCount(this);
             }
         });
     });
 
-    // Initialize the count display for each transport method
     document.querySelectorAll('.transport').forEach((zone) => {
-        updateCount(zone); // This will set the initial count
+        updateCount(zone);
     });
 });

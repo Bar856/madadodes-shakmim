@@ -40,6 +40,8 @@ h1 {
     margin: 10px; 
     background-color: #e7fafb;
     box-shadow: 3px 3px 6px #eeeeee;
+    display: flex;
+    flex-direction: column-reverse;
 }
 
 #names {
@@ -69,9 +71,17 @@ h1 {
     display: none;
 }
 
-.count, .transport-way {
+.count {
     margin-top: 10px;
     font-weight: bold;
     font-size: 2rem;
     color: #15b1d8;
+    order: +1;
+}
+.transport-way{
+    /* margin-top: 10px; */
+    font-weight: bold;
+    font-size: 2rem;
+    color: #15b1d8;
+    bottom: 0;
 }
