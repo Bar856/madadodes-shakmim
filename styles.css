@@ -55,7 +55,7 @@ h1 {
     padding: 10px;
     margin: 10px;
     background-color: #bce2ff;
-    cursor: grab;
+    cursor: pointer;
     border-radius: 10px;
     box-shadow: 2px 2px 4px #bbbbbb;
     font-size: 1rem;
@@ -88,4 +88,19 @@ h1 {
 .trans-img{
     width: 50px;
     height: 80px;
+}
+
+.name.selected {
+    border: 2px solid blue; /* Highlight selected name */
+    background-color: #add8e6; /* Light blue background for the selected name */
+}
+
+.name.disabled {
+    opacity: 0.5; /* Dim names that are not selected */
+    pointer-events: none; /* Prevent interaction with disabled names */
+}
+
+.transport:hover {
+    background-color: #e7fafb; /* Lighter background on hover for transport */
+    cursor: pointer;
 }

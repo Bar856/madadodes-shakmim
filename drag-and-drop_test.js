@@ -1,4 +1,3 @@
-// Function to create name divs
 function createNameDivs(namesArray) {
   const namesContainer = document.getElementById('names');
   namesContainer.innerHTML = '';
@@ -7,21 +6,18 @@ function createNameDivs(namesArray) {
       const nameDiv = document.createElement('div');
       nameDiv.classList.add('name');
       nameDiv.textContent = name;
-      nameDiv.id = 'name-' + index; // Assign a unique ID to each name for tracking
+      nameDiv.id = 'name-' + index; 
       namesContainer.appendChild(nameDiv);
   });
 }
 
-// Function to update the count of children for each transport method
 function updateCount(zone) {
   const count = zone.querySelectorAll('.name').length;
   zone.querySelector('.count').textContent = `${count}`;
 }
 
-// Detect whether the device is mobile
 const isMobileDevice = /Mobi/i.test(navigator.userAgent);
 
-// Drag and Drop handlers for desktop
 function handleDragStart(e) {
   e.dataTransfer.setData('text/plain', e.target.id);
   e.dataTransfer.effectAllowed = 'move';
@@ -43,7 +39,6 @@ function handleDrop(e) {
   }
 }
 
-// Touch event handlers for mobile
 function handleTouchStart(e) {
   const touch = e.targetTouches[0];
   e.target.dataset.startX = touch.pageX;
@@ -78,34 +73,8 @@ function handleTouchEnd(e) {
   }
 }
 
-// Initialize the drag and drop functionality
 document.addEventListener('DOMContentLoaded', (event) => {
   const childrenList = [
-    'אמל אבו רביע',
-    'עומר אברמוב',
-    'שאם אלקרינאו',
-    'ליבי אפשטיין',
-    'רניה ארמילאת',
-    'עבדאללה אשתיוי',
-    'יהלי בונני',
-    'סהר בן חיים',
-    'תאיר בנימין',
-    'שון בקשייב',
-    'רינת גוסקוב',
-    'עמית גנדל',
-    'ליאנה דוידוב',
-    'מיראל ויצמן',
-    'יסמין חטיב',
-    'מישל יחנקו',
-    'איתן יעקובוב',
-    'רפאל כהן',
-    'זיו לסניק',
-    'קימבר מוגילניק',
-    'הילי פדלון',
-    'אדם פיליאבסקי',
-    'איתן ראובן',
-    'אדל שלם',
-    'מיאל שמוטקין'
   ];
   
   createNameDivs(childrenList);
@@ -127,7 +96,6 @@ document.addEventListener('DOMContentLoaded', (event) => {
       });
   }
   
-  // Update the initial count for each zone
   document.querySelectorAll('.transport').forEach(zone => {
       updateCount(zone);
   });

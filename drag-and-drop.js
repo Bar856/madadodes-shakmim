@@ -1,30 +1,3 @@
-const childrenList = [
-    'אמל אבו רביע',
-    'עומר אברמוב',
-    'שאם אלקרינאו',
-    'ליבי אפשטיין',
-    'רניה ארמילאת',
-    'עבדאללה אשתיוי',
-    'יהלי בונני',
-    'סהר בן חיים',
-    'תאיר בנימין',
-    'שון בקשייב',
-    'רינת גוסקוב',
-    'עמית גנדל',
-    'ליאנה דוידוב',
-    'מיראל ויצמן',
-    'יסמין חטיב',
-    'מישל יחנקו',
-    'איתן יעקובוב',
-    'רפאל כהן',
-    'זיו לסניק',
-    'קימבר מוגילניק',
-    'הילי פדלון',
-    'אדם פיליאבסקי',
-    'איתן ראובן',
-    'אדל שלם',
-    'מיאל שמוטקין'
-];
 function makeElementDraggable(element) {
     let active = false;
     let currentX, currentY, initialX, initialY, offsetX = 0, offsetY = 0;
@@ -86,7 +59,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
       });
     createNameDivs(childrenList)
     function updateCount(zone) {
-        const count = zone.querySelectorAll('.name').length; // Ensure to only select .name elements
+        const count = zone.querySelectorAll('.name').length; 
         zone.querySelector('.count').textContent = `${count}`;
     }
 
