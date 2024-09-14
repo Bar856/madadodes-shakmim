@@ -6,6 +6,7 @@ document.addEventListener('DOMContentLoaded', () => {
         'נור',
         'איתן',
         'אליה',
+        'אליה',
         'קורן',
         'מיאר',
         'נהוראי',
